@@ -23,7 +23,7 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.4;
-      padding: 20px;
+      padding: 10px;
       font-size: 13px;
     }
     .page {
@@ -32,67 +32,70 @@
       background: var(--card);
       border-radius: 8px;
       box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-      padding: 24px;
+      padding: 16px;
     }
     .header {
       background: var(--header-bg);
       color: white;
-      padding: 16px 20px;
+      padding: 12px 14px;
       border-radius: 6px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     .header-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     .logo {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 700;
       letter-spacing: 1px;
     }
-    .logo span { display: block; font-size: 0.85rem; font-weight: 400; opacity: 0.9; }
+    .logo span { display: block; font-size: 0.8rem; font-weight: 400; opacity: 0.9; }
     .meta {
       text-align: right;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       opacity: 0.95;
     }
     .meta div { margin: 2px 0; }
     .title {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: 600;
-      margin: 8px 0 4px;
+      margin: 6px 0 3px;
       text-align: center;
     }
     .subtitle {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       opacity: 0.9;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .info-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 12px;
-      font-size: 0.85rem;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 0.8rem;
     }
     .info-box {
       background: rgba(255,255,255,0.1);
-      padding: 10px;
+      padding: 8px;
       border-radius: 4px;
+      font-size: 0.75rem;
     }
     .info-box strong {
       display: block;
-      margin-bottom: 4px;
-      font-size: 0.8rem;
+      margin-bottom: 3px;
+      font-size: 0.7rem;
       text-transform: uppercase;
       opacity: 0.85;
     }
     
     .stage {
-      margin: 24px 0;
+      margin: 18px 0;
       border: 1px solid var(--border);
       border-radius: 6px;
       overflow: hidden;
@@ -100,52 +103,60 @@
     .stage-header {
       background: var(--primary);
       color: white;
-      padding: 10px 16px;
+      padding: 8px 12px;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
     .stage-desc {
-      padding: 10px 16px;
+      padding: 8px 12px;
       background: #f8fafc;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--secondary);
       border-bottom: 1px solid var(--border);
     }
     
     .cable-block {
-      margin: 12px 16px;
-      padding: 10px;
+      margin: 10px 12px;
+      padding: 8px;
       background: #f8fafc;
       border-left: 3px solid var(--accent);
       border-radius: 0 4px 4px 0;
     }
     .cable-block strong {
       color: var(--primary);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
     
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      min-width: 600px;
     }
     th {
       background: #f1f5f9;
-      padding: 8px 10px;
+      padding: 6px 8px;
       text-align: left;
       font-weight: 600;
       color: var(--secondary);
       border-bottom: 2px solid var(--border);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
+      white-space: nowrap;
     }
     td {
-      padding: 8px 10px;
+      padding: 6px 8px;
       border-bottom: 1px solid var(--border);
       vertical-align: top;
+      font-size: 0.8rem;
     }
     tr:hover { background: var(--row-hover); }
-    .num { text-align: right; font-family: monospace; }
+    .num { text-align: right; font-family: monospace; white-space: nowrap; }
+    .center { text-align: center; }
     .total-row {
       background: #eff6ff !important;
       font-weight: 600;
@@ -154,18 +165,10 @@
       border-top: 2px solid var(--primary);
       border-bottom: none;
     }
-    .stage-total {
-      text-align: right;
-      padding: 10px 16px;
-      background: #f8fafc;
-      font-weight: 600;
-      color: var(--primary);
-      border-top: 1px solid var(--border);
-    }
     
     .final-section {
-      margin: 28px 0;
-      padding: 20px;
+      margin: 20px 0;
+      padding: 16px;
       background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
       color: white;
       border-radius: 8px;
@@ -173,58 +176,187 @@
     .final-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 16px;
     }
     .final-box {
       background: rgba(255,255,255,0.1);
-      padding: 14px;
+      padding: 12px;
       border-radius: 6px;
     }
     .final-box h4 {
-      margin-bottom: 8px;
-      font-size: 0.9rem;
+      margin-bottom: 6px;
+      font-size: 0.85rem;
       opacity: 0.9;
     }
     .final-sum {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      margin: 8px 0;
+      margin: 6px 0;
     }
     .sum-text {
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       font-style: italic;
       opacity: 0.95;
-      margin-top: 6px;
+      margin-top: 4px;
+    }
+    .final-note {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      opacity: 0.9;
+      line-height: 1.5;
     }
     
     .footer {
-      margin-top: 28px;
-      padding-top: 16px;
+      margin-top: 20px;
+      padding-top: 12px;
       border-top: 1px solid var(--border);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--secondary);
       text-align: center;
     }
     .footer-note {
       background: #fefce8;
-      padding: 10px;
+      padding: 8px;
       border-radius: 4px;
-      margin: 12px 0;
+      margin: 10px 0;
       border-left: 3px solid #f59e0b;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
+      line-height: 1.4;
+    }
+    
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      body { 
+        padding: 5px; 
+        font-size: 12px;
+      }
+      .page { 
+        padding: 10px;
+        border-radius: 4px;
+      }
+      .header {
+        padding: 10px;
+      }
+      .header-top {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .logo {
+        font-size: 1.1rem;
+      }
+      .logo span {
+        font-size: 0.75rem;
+      }
+      .meta {
+        text-align: left;
+        font-size: 0.7rem;
+      }
+      .title {
+        font-size: 1rem;
+      }
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .info-box {
+        padding: 6px;
+        font-size: 0.7rem;
+      }
+      .stage {
+        margin: 12px 0;
+      }
+      .stage-header {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+      }
+      .stage-desc {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+      }
+      .cable-block {
+        margin: 8px 10px;
+        padding: 6px;
+      }
+      .cable-block strong {
+        font-size: 0.8rem;
+      }
+      table {
+        font-size: 0.75rem;
+        min-width: 550px;
+      }
+      th {
+        padding: 5px 6px;
+        font-size: 0.7rem;
+      }
+      td {
+        padding: 5px 6px;
+        font-size: 0.75rem;
+      }
+      .final-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .final-section {
+        padding: 12px;
+        margin: 14px 0;
+      }
+      .final-box {
+        padding: 10px;
+      }
+      .final-sum {
+        font-size: 1.4rem;
+      }
+      .sum-text {
+        font-size: 0.8rem;
+      }
+      .footer-note {
+        font-size: 0.7rem;
+        padding: 6px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      body {
+        font-size: 11px;
+      }
+      .page {
+        padding: 8px;
+      }
+      .logo {
+        font-size: 1rem;
+      }
+      .title {
+        font-size: 0.95rem;
+      }
+      .subtitle {
+        font-size: 0.75rem;
+      }
+      table {
+        font-size: 0.7rem;
+        min-width: 500px;
+      }
+      th {
+        padding: 4px 5px;
+        font-size: 0.65rem;
+      }
+      td {
+        padding: 4px 5px;
+        font-size: 0.7rem;
+      }
+      .final-sum {
+        font-size: 1.3rem;
+      }
     }
     
     @media print {
       body { padding: 0; background: white; }
-      .page { box-shadow: none; border-radius: 0; padding: 16px; }
+      .page { box-shadow: none; border-radius: 0; padding: 12px; }
       .no-print { display: none; }
-    }
-    @media (max-width: 768px) {
-      .info-grid, .final-grid { grid-template-columns: 1fr; }
-      .header-top { flex-direction: column; gap: 12px; }
-      .meta { text-align: left; }
-      table { font-size: 0.8rem; }
-      th, td { padding: 6px 8px; }
+      .table-wrapper { overflow-x: visible; }
+      table { min-width: 100%; }
     }
   </style>
 </head>
@@ -275,50 +407,52 @@
       <div class="stage-header">⚡ Этап 1: Монтаж розеточной сети</div>
       <div class="stage-desc">Установка розеток бытового и специального назначения (в т.ч. для влажных помещений)</div>
       
-      <table>
-        <thead>
-          <tr>
-            <th>№</th>
-            <th>Наименование работ</th>
-            <th>Ед. изм.</th>
-            <th class="num">Объём</th>
-            <th class="num">Цена, ₽</th>
-            <th class="num">Стоимость, ₽</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1.1</td>
-            <td>Монтаж розетки встроенной 2-местной с/з 16А (IP20) EKF Валенсия</td>
-            <td>шт.</td>
-            <td class="num">85</td>
-            <td class="num">450</td>
-            <td class="num">38 250</td>
-          </tr>
-          <tr>
-            <td>1.2</td>
-            <td>Монтаж розетки накладной 1-местной с/з 16А (IP20) EKF Минск</td>
-            <td>шт.</td>
-            <td class="num">12</td>
-            <td class="num">250</td>
-            <td class="num">3 000</td>
-          </tr>
-          <tr>
-            <td>1.3</td>
-            <td>Монтаж розетки встроенной 1-местной с крышкой и защ. шторками 16А (IP44) EKF Валенсия</td>
-            <td>шт.</td>
-            <td class="num">4</td>
-            <td class="num">450</td>
-            <td class="num">1 800</td>
-          </tr>
-          <tr class="total-row">
-            <td colspan="3"><strong>Итого по розеточной сети:</strong></td>
-            <td></td>
-            <td></td>
-            <td class="num"><strong>43 050</strong></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Наименование работ</th>
+              <th>Ед. изм.</th>
+              <th class="num">Объём</th>
+              <th class="num">Цена, ₽</th>
+              <th class="num">Стоимость, ₽</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.1</td>
+              <td>Монтаж розетки встроенной 2-местной с/з 16А (IP20) EKF Валенсия</td>
+              <td>шт.</td>
+              <td class="num">85</td>
+              <td class="num">450</td>
+              <td class="num">38 250</td>
+            </tr>
+            <tr>
+              <td>1.2</td>
+              <td>Монтаж розетки накладной 1-местной с/з 16А (IP20) EKF Минск</td>
+              <td>шт.</td>
+              <td class="num">12</td>
+              <td class="num">250</td>
+              <td class="num">3 000</td>
+            </tr>
+            <tr>
+              <td>1.3</td>
+              <td>Монтаж розетки встроенной 1-местной с крышкой и защ. шторками 16А (IP44) EKF Валенсия</td>
+              <td>шт.</td>
+              <td class="num">4</td>
+              <td class="num">450</td>
+              <td class="num">1 800</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="3"><strong>Итого по розеточной сети:</strong></td>
+              <td></td>
+              <td></td>
+              <td class="num"><strong>43 050</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Этап 2: Освещение -->
@@ -329,58 +463,60 @@
       <div class="cable-block">
         <strong>📦 BEST OFFICE CLASS 30 IP40 (30Вт) — 269 шт.</strong>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>№</th>
-            <th>Наименование работ</th>
-            <th>Ед. изм.</th>
-            <th class="num">Объём</th>
-            <th class="num">Цена, ₽</th>
-            <th class="num">Стоимость, ₽</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2.1</td>
-            <td>Монтаж светильника светодиодного потолочного 1×30Вт, IP40</td>
-            <td>шт.</td>
-            <td class="num">269</td>
-            <td class="num">950</td>
-            <td class="num">255 550</td>
-          </tr>
-          <tr>
-            <td>2.2</td>
-            <td>Монтаж светильника для освещения досок BEST ССП PL-03 CLASS 30</td>
-            <td>шт.</td>
-            <td class="num">24</td>
-            <td class="num">1 800</td>
-            <td class="num">43 200</td>
-          </tr>
-          <tr>
-            <td>2.3</td>
-            <td>Монтаж светильника накладного 1×10Вт, IP65 BEST ЖКХ-С 10</td>
-            <td>шт.</td>
-            <td class="num">53</td>
-            <td class="num">950</td>
-            <td class="num">50 350</td>
-          </tr>
-          <tr>
-            <td>2.4</td>
-            <td>Монтаж светильника со встроенным БАП BEST OFFICE LONG MINI 26</td>
-            <td>шт.</td>
-            <td class="num">4</td>
-            <td class="num">950</td>
-            <td class="num">3 800</td>
-          </tr>
-          <tr class="total-row">
-            <td colspan="3"><strong>Итого по освещению:</strong></td>
-            <td></td>
-            <td></td>
-            <td class="num"><strong>352 900</strong></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Наименование работ</th>
+              <th>Ед. изм.</th>
+              <th class="num">Объём</th>
+              <th class="num">Цена, ₽</th>
+              <th class="num">Стоимость, ₽</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2.1</td>
+              <td>Монтаж светильника светодиодного потолочного 1×30Вт, IP40</td>
+              <td>шт.</td>
+              <td class="num">269</td>
+              <td class="num">950</td>
+              <td class="num">255 550</td>
+            </tr>
+            <tr>
+              <td>2.2</td>
+              <td>Монтаж светильника для освещения досок BEST ССП PL-03 CLASS 30</td>
+              <td>шт.</td>
+              <td class="num">24</td>
+              <td class="num">1 800</td>
+              <td class="num">43 200</td>
+            </tr>
+            <tr>
+              <td>2.3</td>
+              <td>Монтаж светильника накладного 1×10Вт, IP65 BEST ЖКХ-С 10</td>
+              <td>шт.</td>
+              <td class="num">53</td>
+              <td class="num">950</td>
+              <td class="num">50 350</td>
+            </tr>
+            <tr>
+              <td>2.4</td>
+              <td>Монтаж светильника со встроенным БАП BEST OFFICE LONG MINI 26</td>
+              <td>шт.</td>
+              <td class="num">4</td>
+              <td class="num">950</td>
+              <td class="num">3 800</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="3"><strong>Итого по освещению:</strong></td>
+              <td></td>
+              <td></td>
+              <td class="num"><strong>352 900</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Этап 3: Коммутация и управление -->
@@ -388,50 +524,52 @@
       <div class="stage-header">🔘 Этап 3: Установка выключателей и коммутация</div>
       <div class="stage-desc">Монтаж выключателей скрытой установки, распредкоробок с расключением</div>
       
-      <table>
-        <thead>
-          <tr>
-            <th>№</th>
-            <th>Наименование работ</th>
-            <th>Ед. изм.</th>
-            <th class="num">Объём</th>
-            <th class="num">Цена, ₽</th>
-            <th class="num">Стоимость, ₽</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>3.1</td>
-            <td>Монтаж выключателя одноклавишного скрытого 10А (в т.ч. для аварийного света)</td>
-            <td>шт.</td>
-            <td class="num">37</td>
-            <td class="num">500</td>
-            <td class="num">18 500</td>
-          </tr>
-          <tr>
-            <td>3.2</td>
-            <td>Монтаж выключателя двухклавишного скрытого 10А</td>
-            <td>шт.</td>
-            <td class="num">16</td>
-            <td class="num">500</td>
-            <td class="num">8 000</td>
-          </tr>
-          <tr>
-            <td>3.3</td>
-            <td>Установка распредкоробки с расключением цепей</td>
-            <td>шт.</td>
-            <td class="num">399</td>
-            <td class="num">750</td>
-            <td class="num">299 250</td>
-          </tr>
-          <tr class="total-row">
-            <td colspan="3"><strong>Итого по коммутации:</strong></td>
-            <td></td>
-            <td></td>
-            <td class="num"><strong>325 750</strong></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Наименование работ</th>
+              <th>Ед. изм.</th>
+              <th class="num">Объём</th>
+              <th class="num">Цена, ₽</th>
+              <th class="num">Стоимость, ₽</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3.1</td>
+              <td>Монтаж выключателя одноклавишного скрытого 10А (в т.ч. для аварийного света)</td>
+              <td>шт.</td>
+              <td class="num">37</td>
+              <td class="num">500</td>
+              <td class="num">18 500</td>
+            </tr>
+            <tr>
+              <td>3.2</td>
+              <td>Монтаж выключателя двухклавишного скрытого 10А</td>
+              <td>шт.</td>
+              <td class="num">16</td>
+              <td class="num">500</td>
+              <td class="num">8 000</td>
+            </tr>
+            <tr>
+              <td>3.3</td>
+              <td>Установка распредкоробки с расключением цепей</td>
+              <td>шт.</td>
+              <td class="num">399</td>
+              <td class="num">750</td>
+              <td class="num">299 250</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="3"><strong>Итого по коммутации:</strong></td>
+              <td></td>
+              <td></td>
+              <td class="num"><strong>325 750</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Этап 4: Прокладка трасс -->
@@ -439,50 +577,52 @@
       <div class="stage-header">🛠️ Этап 4: Прокладка кабельных трасс и подготовка оснований</div>
       <div class="stage-desc">Монтаж кабель-каналов, штробление, устройство проходных отверстий</div>
       
-      <table>
-        <thead>
-          <tr>
-            <th>№</th>
-            <th>Наименование работ</th>
-            <th>Ед. изм.</th>
-            <th class="num">Объём</th>
-            <th class="num">Цена, ₽</th>
-            <th class="num">Стоимость, ₽</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>4.1</td>
-            <td>Монтаж кабель-канала (укладка, крепление, закрывание крышки)</td>
-            <td>м</td>
-            <td class="num">97</td>
-            <td class="num">150</td>
-            <td class="num">14 550</td>
-          </tr>
-          <tr>
-            <td>4.2</td>
-            <td>Штробление стен под скрытую проводку (кирпич/бетон)</td>
-            <td>м</td>
-            <td class="num">547</td>
-            <td class="num">450</td>
-            <td class="num">246 150</td>
-          </tr>
-          <tr>
-            <td>4.3</td>
-            <td>Устройство проходных отверстий с гильзами (диаметр до 25 мм)</td>
-            <td>шт.</td>
-            <td class="num">47</td>
-            <td class="num">450</td>
-            <td class="num">21 150</td>
-          </tr>
-          <tr class="total-row">
-            <td colspan="3"><strong>Итого по трассам:</strong></td>
-            <td></td>
-            <td></td>
-            <td class="num"><strong>281 850</strong></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Наименование работ</th>
+              <th>Ед. изм.</th>
+              <th class="num">Объём</th>
+              <th class="num">Цена, ₽</th>
+              <th class="num">Стоимость, ₽</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4.1</td>
+              <td>Монтаж кабель-канала (укладка, крепление, закрывание крышки)</td>
+              <td>м</td>
+              <td class="num">97</td>
+              <td class="num">150</td>
+              <td class="num">14 550</td>
+            </tr>
+            <tr>
+              <td>4.2</td>
+              <td>Штробление стен под скрытую проводку (кирпич/бетон)</td>
+              <td>м</td>
+              <td class="num">547</td>
+              <td class="num">450</td>
+              <td class="num">246 150</td>
+            </tr>
+            <tr>
+              <td>4.3</td>
+              <td>Устройство проходных отверстий с гильзами (диаметр до 25 мм)</td>
+              <td>шт.</td>
+              <td class="num">47</td>
+              <td class="num">450</td>
+              <td class="num">21 150</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="3"><strong>Итого по трассам:</strong></td>
+              <td></td>
+              <td></td>
+              <td class="num"><strong>281 850</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <!-- Итоговая стоимость -->
@@ -490,7 +630,7 @@
       <div class="final-grid">
         <div class="final-box">
           <h4>📊 Свод по этапам</h4>
-          <table style="background: transparent; color: white;">
+          <table style="background: transparent; color: white; font-size: 0.85rem;">
             <tr><td>Этап 1: Розеточная сеть</td><td class="num">43 050 ₽</td></tr>
             <tr><td>Этап 2: Освещение</td><td class="num">352 900 ₽</td></tr>
             <tr><td>Этап 3: Коммутация</td><td class="num">325 750 ₽</td></tr>
@@ -505,7 +645,7 @@
           <h4>💰 Итоговая стоимость работ</h4>
           <div class="final-sum">1 003 550 ₽</div>
           <div class="sum-text">(Один миллион три тысячи пятьсот пятьдесят рублей 00 копеек)</div>
-          <div style="margin-top: 12px; font-size: 0.85rem; opacity: 0.9;">
+          <div class="final-note">
             ⚠️ Стоимость указана без учёта материалов и НДС.<br>
             ✅ Гарантия на работы: 24 месяца.<br>
             📋 Пусконаладка и протоколы измерений — включены.
@@ -518,22 +658,15 @@
     <div class="footer">
       <div class="footer-note">
         📌 Примечание: Объёмы работ рассчитаны на основании проектной документации 04-2023-ЭОМ 
-        и данных по 43 помещениям 3-го этажа МБОУ СОШ № 28. Фактические объёмы могут корректироваться 
-        по результатам предмонтажного обследования.
+        и данных по 43 помещениям 3-го этажа МБОУ СОШ № 28.
       </div>
       <p>
-        Документ сформирован автоматически | © 2026 DEM RUS Электроснабжение | Все права защищены
+        © 2026 DEM RUS Электроснабжение
       </p>
-      <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.7;">
-        Печать: <button class="no-print" onclick="window.print()" style="background: var(--accent); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; margin-left: 8px;">🖨️ Печать / Сохранить PDF</button>
+      <p style="margin-top: 6px; font-size: 0.7rem; opacity: 0.7;">
+        <button class="no-print" onclick="window.print()" style="background: var(--accent); color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 0.75rem;">🖨️ Печать / PDF</button>
       </p>
     </div>
   </div>
-
-  <script>
-    // Автоматический пересчёт при изменении данных (для разработчика)
-    // В продакшене можно убрать или вынести в отдельный модуль
-    console.log('✅ Смета загружена. Общая сумма: 1 003 550 ₽');
-  </script>
 </body>
 </html>
